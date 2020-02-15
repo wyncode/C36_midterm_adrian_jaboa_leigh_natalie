@@ -5,6 +5,9 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const path = require('path');
 const app = express();
+const drinksRouter = require('./routes/drinks');
+const randomRouter = require('./routes/randomDrink');
+const drinkRouter = require('./routes/drink');
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
@@ -15,13 +18,11 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api/demo', (request, response) => {
-  response.json({
-    message: 'Hello from server.js'
-  });
-});
-// END DEMO
+app.use(express.json());
+
+app.use(drinksRouter);
+app.use(randomRouter);
+app.use(drinkRouter);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
