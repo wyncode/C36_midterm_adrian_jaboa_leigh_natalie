@@ -1,4 +1,7 @@
 import React from 'react';
+import Cards from './components/Cards';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 import RandomButton from './components/RandomButton';
 
@@ -13,13 +16,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="demo">
-        
-        <h1>Hello from client/src/App.js</h1>
-        <h1>{this.state.serverMessage}</h1>
-        <RandomButton />
 
-      </div>
+      <Cards />
+    
     );
   }
 }
