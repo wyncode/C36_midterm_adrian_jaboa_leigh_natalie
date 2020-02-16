@@ -18,11 +18,11 @@ function Cards() {
     getDrink();
   }, []);
   return (
-    <div>
+    <div id="card-parent">
       {drinkData.map(drink => {
         return (
-          <React.Fragment id="card-parent">
-            <CardGroup id="card" style={{ width: 200, margin: 0 }}>
+          <React.Fragment>
+            <CardGroup id="card" style={{ width: 200, margin: 15 }}>
               <Card
                 className="p-3"
                 style={{ width: 300, margin: 0, padding: 20 }}
