@@ -12,4 +12,9 @@
   place-items: center;
 }
 
+#card-parent {
+  display: flex;
+  flex-direction: row;
+}
+
 /* END DEMO */
