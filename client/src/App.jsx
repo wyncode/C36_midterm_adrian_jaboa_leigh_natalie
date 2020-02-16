@@ -1,5 +1,26 @@
 import React from 'react';
+import {BrowserRouter, Switch, Route} from "react-router-dom"
+import Navigation from './components/Navigation'
 import './App.css';
+
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+      <Navigation/>
+      <Switch>
+        <Route exact path = "/" component={Home}/>
+        <Route exact path = "/about" component={About}/>
+        <Route exact path = "/catagories" component={Catagories}/>
+      </Switch>
+      </BrowserRouter>
+
+    </div>
+  );
+}
+//created by Natalie Lozano 02.15.2020
+
 
 class App extends React.Component {
   state = { serverMessage: '' };
@@ -12,6 +33,7 @@ class App extends React.Component {
 
   render() {
     return (
+    
       <div id="demo">
         <h1>Hello from client/src/App.js</h1>
         <h1>{this.state.serverMessage}</h1>
