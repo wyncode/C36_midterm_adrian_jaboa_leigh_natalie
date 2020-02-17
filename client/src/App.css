@@ -12,6 +12,12 @@
   place-items: center;
 }
 
+#card-parent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* END DEMO */
 
 .hero-container {
