@@ -4,7 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import './App.css';
+
+import AboutUs from "./components/AboutUs";
+
 import RandomButton from './components/RandomButton';
+
 
 class App extends React.Component {
   state = { serverMessage: '' };
@@ -17,6 +21,7 @@ class App extends React.Component {
 
   render() {
     return (
+     <AboutUs/>
       <>
         <Navigation />
         <Cards />
