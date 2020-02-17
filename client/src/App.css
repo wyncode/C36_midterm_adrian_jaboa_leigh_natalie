@@ -18,15 +18,3 @@
   flex-wrap: wrap;
 }
 
-/* END DEMO */
-
-.hero-container {
-  display: flex;
-  justify-content: center;
-}
-
-.hero-title {
-  font-size: 20px;
-  max-width: 500px;
-  text-align: center;
-}

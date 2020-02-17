@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
 import CardGroup from 'react-bootstrap/CardGroup';
 
-function Cards() {
+function VodkaCards() {
   const [drinkData, setDrinkData] = useState([]);
 
   const getDrink = async () => {
     const { data } = await axios.get(
-      'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin'
+      'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=vodka'
     );
     setDrinkData(data.drinks);
+    console.log(data.dinks, 'wtf');
   };
 
   useEffect(() => {
@@ -44,4 +44,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default VodkaCards;

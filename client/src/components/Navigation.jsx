@@ -16,24 +16,15 @@ function Navigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             <NavDropdown
               href="/about"
-              title="Catagories"
+              title="Categories"
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="/catagories/gin">Gin</NavDropdown.Item>
-              <NavDropdown.Item href="/catagories/rum">Rum</NavDropdown.Item>
-              <NavDropdown.Item href="/catagories/scotch">
-                Scotch
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/catagories/tequila">
-                Tequila
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#catagories/vodka">
-                Vodka
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/gin">Gin</NavDropdown.Item>
+              <NavDropdown.Item href="/vodka">Vodka</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form inline>
