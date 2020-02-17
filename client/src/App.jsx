@@ -17,8 +17,8 @@ class App extends React.Component {
         
         <h1>Hello from client/src/App.js</h1>
         <h1>{this.state.serverMessage}</h1>
+        
         <RandomButton />
-
       </div>
     );
   }
