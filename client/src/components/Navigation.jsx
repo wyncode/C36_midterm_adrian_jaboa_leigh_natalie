@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 // import React, { Component } from 'react';
@@ -7,8 +7,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-function Navigation() {
+import history from './history';
+function Navigation(props, match) {
+  console.log(props);
   const handleSelect = eventKey => alert(`selected ${eventKey}`);
+  const [search, setSearch] = useState('');
+  const handleChange = e => {
+    setSearch(e.target.value);
+    console.log(search);
+  };
+  const handleSubmit = () => {
+    history.push(`/search/${search}`);
+  };
   return (
     <>
       <Navbar bg="dark" variant="dark">
@@ -27,9 +37,17 @@ function Navigation() {
               <NavDropdown.Item href="/vodka">Vodka</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-info">Search</Button>
+          <Form inline onSubmit={handleSubmit}>
+            <FormControl
+              type="text"
+              placeholder="Search"
+              className="mr-sm-2"
+              value={search}
+              onChange={handleChange}
+            />
+            <Button type="submit" variant="outline-info">
+              Search
+            </Button>
           </Form>
         </Navbar.Collapse>
       </Navbar>

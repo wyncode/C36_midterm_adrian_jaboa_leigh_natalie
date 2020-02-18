@@ -5,13 +5,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import './App.css';
 
-import AboutUs from "./components/AboutUs";
+import AboutUs from './components/AboutUs';
 
 import RandomButton from './components/RandomButton';
 import VodkaCard from './components/VodkaCard';
 import Home from './components/Home';
-import AboutUs from './components/';
-
+import Search from './components/Search';
+// import AboutUs from './components/';
 
 const App = () => (
   <BrowserRouter>
@@ -20,7 +20,8 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/gin" component={GinCards} />
       <Route path="/vodka" component={VodkaCard} />
+      <Route exact path="/search/:query" component={Search} />
     </Switch>
   </BrowserRouter>
 );
-  export default App;
+export default App;
