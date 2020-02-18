@@ -1,13 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 
+const API_KEY = "9973533" 
+
 function Search({ match }) {
   const userSearch = match.params.query;
 
   const handleClick = () => {
     axios
       .get(
-        `https://www.thecocktaildb.com/api/json/v2/9973533/search.php?f=${userSearch}`
+        `https://www.thecocktaildb.com/api/json/v2/${API_KEY}/search.php?f=${userSearch}`
       )
       .then(response =>
         console.log(
