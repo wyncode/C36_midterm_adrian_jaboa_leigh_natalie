@@ -21,6 +21,7 @@ function GinCards() {
     return (
       <Modal
         // {...props}
+        show={open}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered

@@ -1,5 +1,5 @@
 /* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
-/* 
+
 #demo {
   width: 100vw;
   height: 100vh;
@@ -56,17 +56,17 @@
     blue,
     violet
   );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 20vw; */
 }
+
+/* background:-webkit-background-clip: text; */
+/* -webkit-text-fill-color: transparent; */
+/* font-size: 20vw; */
 
 .video {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    overflow:hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-
