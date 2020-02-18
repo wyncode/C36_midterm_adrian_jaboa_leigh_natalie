@@ -20,19 +20,17 @@ import Search from './components/Search';
 const App = () => (
   <>
   <RandomButton/>
-  {/* <AboutUs/> */}
+
   <BrowserRouter>
     <Navigation />
-    <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/gin" component={GinCards} />
       <Route path="/vodka" component={VodkaCard} />
 
-      <Route exact path="/search/:query" component={Search} />
+      <Route exact path="/search/:searchTerm" component={Search} />
 
       <Route exact path="/About" component={AboutUs}/>
 
-    </Switch>
   </BrowserRouter>
   </>
 );

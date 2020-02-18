@@ -1,27 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Search({ match }) {
-  const userSearch = match.params.query;
+// const getRecipe =  () => {
+//   // const recipeName = e.target.elements.recipeName.value;
+//   // event.preventDefault();
+//  axios.get(`/api/search?recipe=${search}`)
+//  .then(data => setRecipe({ recipes: data.drinks}))
+// }
+// useEffect(getRecipe, [])
 
-  const handleClick = () => {
-    axios
-      .get(
-        `https://www.thecocktaildb.com/api/json/v2/9973533/search.php?f=${userSearch}`
-      )
-      .then(response =>
-        console.log(
-          response.data.drinks.map(eachDrink => console.log(eachDrink))
-        )
-      );
-  };
 
+
+function Search({match}) {
+  const [drinks, setDrinks] = useState([]);
+
+  useEffect(() => {
+    axios.get(`/api/search?recipe=${match.params.searchTerm}`)
+      .then(res => setDrinks(res.data.drinks))
+  }, [])
+  
   return (
     <div style={{ marginTop: '300px' }}>
-      <button onClick={handleClick}>log it</button>
-      <h1>This is a test</h1>
+      {drinks.map(drink => <h1>{drink.strDrink}</h1>)}
     </div>
   );
+  
 }
 
 export default Search;

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 // import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 // import React, { Component } from 'react';
@@ -9,18 +10,17 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import history from './history';
 
-function Navigation(props, match) {
-  console.log(props);
-  const handleSelect = eventKey => alert(`selected ${eventKey}`);
-  const [search, setSearch] = useState('');
-  const handleChange = e => {
-    setSearch(e.target.value);
-    console.log(search);
-  };
 
-  const handleSubmit = () => {
+
+function Navigation() {
+  const [search, setSearch] = useState('');
+  
+  const handleChange = e => setSearch(e.target.value);
+
+  const handleSubmit = e => {
+    e.preventDefault()
     history.push(`/search/${search}`);
-  };
+  }
 
   return (
     <>
@@ -47,6 +47,7 @@ function Navigation(props, match) {
               className="mr-sm-2"
               value={search}
               onChange={handleChange}
+              onSubmit={handleSubmit}
             />
             <Button type="submit" variant="outline-info">
               Search
