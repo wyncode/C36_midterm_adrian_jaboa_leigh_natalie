@@ -7,27 +7,24 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-
 import history from './history';
+
 function Navigation(props, match) {
   console.log(props);
-
-
-
-function Navigation() {
-
   const handleSelect = eventKey => alert(`selected ${eventKey}`);
   const [search, setSearch] = useState('');
   const handleChange = e => {
     setSearch(e.target.value);
     console.log(search);
   };
+
   const handleSubmit = () => {
     history.push(`/search/${search}`);
   };
+
   return (
     <>
-      <Navbar bg="dark" variant="dark" style={{zIndex: 5}}>
+      <Navbar bg="dark" variant="dark" style={{ zIndex: 5 }}>
         <Navbar.Brand href="/home">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -62,4 +59,3 @@ function Navigation() {
 }
 
 export default Navigation;
-

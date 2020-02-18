@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 
-function VodkaCards() {
+function VodkaCard() {
   const [drinkData, setDrinkData] = useState([]);
 
   const getDrink = async () => {
@@ -48,4 +48,4 @@ function VodkaCards() {
   );
 }
 
-export default VodkaCards;
+export default VodkaCard;
