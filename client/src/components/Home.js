@@ -7,6 +7,7 @@ const Home = props => {
   return (
     <>
     <video
+    className="video"
         autoPlay
         muted
         loop
