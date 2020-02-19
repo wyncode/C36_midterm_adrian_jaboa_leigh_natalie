@@ -21,16 +21,14 @@ const App = () => (
   <>
   <BrowserRouter>
     <Navigation />
-    <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/gin" component={GinCards} />
-      <Route path="/vodka" component={VodkaCard} />
+      <Route exact path="/vodka" component={VodkaCard} />
 
-      <Route exact path="/search/:query" component={Search} />
+      <Route path="/search/:searchTerm" component={Search} />
 
       <Route exact path="/About" component={AboutUs}/>
 
-    </Switch>
   </BrowserRouter>
   {/* <Navigation/> */}
   </>

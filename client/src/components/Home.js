@@ -2,7 +2,7 @@ import React from 'react';
 import myVideo from '../photos/homepage_video.mp4'
 import RandomButton from './RandomButton';
 
-const Home = () => {
+const Home = props => {
   return (
     <video
       className="video"

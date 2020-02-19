@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
-// import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-// import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
-function Navigation(props, match) {
-  const handleSelect = eventKey => alert(`selected ${eventKey}`);
-  const [search, setSearch] = useState('');
-  const handleChange = e => {
-    setSearch(e.target.value);
-    console.log(search);
-  };
 
+function Navigation() {
+  const history = useHistory();
+  const [search, setSearch] = useState('');
+  
+  const handleChange = e => setSearch(e.target.value);
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    history.push(`/search/${search}`);
+  }
+  
   return (
     <>
       <Navbar bg="dark" variant="dark" style={{ zIndex: 5 }}>
@@ -41,6 +44,7 @@ function Navigation(props, match) {
               className="mr-sm-2"
               value={search}
               onChange={handleChange}
+
             />
             <Button type="submit" variant="outline-info">
               Search
