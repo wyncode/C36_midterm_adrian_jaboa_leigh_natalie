@@ -29,7 +29,7 @@ function Navigation() {
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/randomButton">Random Drink</Nav.Link>
+            <Nav.Link href="/randomButton">Discover</Nav.Link>
           </Nav>
 
           <Form inline onSubmit={handleSubmit}>
