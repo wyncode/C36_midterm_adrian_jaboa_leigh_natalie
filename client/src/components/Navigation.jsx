@@ -23,7 +23,7 @@ function Navigation() {
   return (
     <>
       <Navbar bg="dark" variant="dark" style={{ zIndex: 5 }}>
-  <Navbar.Brand href="/home"><img src={img} alt="logo" /></Navbar.Brand>
+        <Navbar.Brand href="/home"><img src={img} alt="logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
