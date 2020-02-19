@@ -19,7 +19,6 @@ import Search from './components/Search';
 
 const App = () => (
   <>
-  <RandomButton/>
 
   <BrowserRouter>
     <Navigation />
