@@ -60,15 +60,18 @@ function Search({ match }) {
       .get(`/api/search?recipe=${match.params.searchTerm}`)
       .then(res => setDrinks(res.data.drinks || []));
   }, []);
-
   return (
     <div id="card-parent">
       {drinks &&
         drinks.map(drink => {
           return (
             <React.Fragment key={drink.idDrink}>
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={drink.strDrinkThumb} />
+              <Card className="recipes__box" style={{ width: '18rem' }}>
+                <Card.Img
+                  className="recipes__box-img"
+                  variant="top"
+                  src={drink.strDrinkThumb}
+                />
                 <Card.Body>
                   <Card.Title>{drink.strDrink}</Card.Title>
                   <Button onClick={() => handleOpen(drink)} variant="primary">

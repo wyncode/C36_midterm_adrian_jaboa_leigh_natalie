@@ -69,24 +69,36 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  z-index: -1;
 }
 .randombuttonDrink {
-z-index: 1;
-color: blue;
-size: 100px;
+  z-index: 1;
+  color: red;
+  size: 100px;
 }
+
 .random-drink-container{
-  width: 50px;
+  width: 250px;
   height: 50px;
+  justify-content: center;
 }
+
 #randomButtonImg{
-  height: 200px;
+  height: 250px;
+  width: 265px;
+  border-radius: 10%;
+  margin: 10px;
+  background-position: center;
 }
+
 #randombuttonImgParent {
   display: grid;
   position: absolute;
   align-items: baseline;
   font-size: medium;
+  border: solid 3px gray;
+  box-shadow:inset 0px -20px 14px -7px #276873;
+
 }
 .close-button {
   color: red;
@@ -96,14 +108,98 @@ size: 100px;
   font-style: unset;
 }
 #randomDrinkTextId {
-  color: greenyellow;
+  color: hotpink;
   font-size: 25px;
   padding: 0%;
-  margin: 0%;
+  margin: 10px;
 }
-#ThankGoodness4Tommy {
+
+.exit_button {
+  background-color: hotpink;
+  margin: 5px;
+  color: white;
+}
+
+#ingredients {
+  color: #2ABFCD;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#randomButtonDrink {
+  box-shadow:inset 0px -20px 14px -7px #276873;
+	background:linear-gradient(to bottom, #2ABFCD 5%, #2ABFCD 100%);
+	background-color:#2ABFCD;
+	border-radius:19px;
+	border:2px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+  text-shadow:0px -2px 0px #3d768a;
+  margin-top: 20px;
+  margin-left: 40vw;
+  margin-bottom: 20px;
+}
+#randomButtonDrink:hover {
+  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+#randomButtonDrink:active {
+  position:relative;
+	top:1px;
+}
+
+#randombuttonImgParent {
+  position: absolute;
+  margin-left: 40%;
+  background: #fff;
+  box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.random-drink_header {
+
+}
+
+#tgft {
   font-size: medium;
   text-shadow: hotpink;
   padding: 0%;
-  margin: 0%;
+  margin-left: 15px;
+}
+
+.recipes__box-img {
+  height: 250px;
+  width: 265px;
+   border-radius: 10%;
+   margin: 10px;
+ }
+ .recipes__box {
+   background: #fff;
+   margin: 10px;
+   padding-bottom: 2rem;
+   border-radius: 5px;
+   box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
+   text-align: center;
+   overflow: hidden;
+ }
+
+ .hero-container {
+  background-image: image();
+  font-size: 30px;
+  font-weight: 200;
+  
+}
+
+.hero-title {
+  color: pink;
+  font-style: oblique;
+  font-weight: 400;
 }

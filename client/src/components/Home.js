@@ -1,12 +1,12 @@
 import React from 'react';
 import myVideo from '../photos/homepage_video.mp4';
-import RandomButton from './RandomButton';
 
 
 const Home = props => {
   return (
     <>
     <video
+    className="video"
         autoPlay
         muted
         loop
@@ -19,7 +19,7 @@ const Home = props => {
       >
         <source src={myVideo} type="video/mp4" />
       </video>
-      <RandomButton/>
+      
       </>
   )
 };
