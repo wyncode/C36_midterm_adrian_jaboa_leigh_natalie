@@ -190,3 +190,17 @@
    text-align: center;
    overflow: hidden;
  }
+
+
+ .hero-container {
+  background-image: image();
+  font-size: 30px;
+  font-weight: 200;
+  
+}
+
+.hero-title {
+  color: pink;
+  font-style: oblique;
+  font-weight: 400;
+}
