@@ -1,9 +1,11 @@
 import React from 'react';
 import myVideo from '../photos/homepage_video.mp4'
+import RandomButton from './RandomButton';
 
 const Home = () => {
   return (
     <video
+      className="video"
         autoPlay
         muted
         loop
@@ -15,7 +17,13 @@ const Home = () => {
         }}
       >
         <source src={myVideo} type="video/mp4" />
+        
       </video>
+      <div id="HomePageDiv"></div>
+      <div id="HomepageDiv2"></div>
+      <div>
+      <RandomButton />
+      </div>
   )
 };
 

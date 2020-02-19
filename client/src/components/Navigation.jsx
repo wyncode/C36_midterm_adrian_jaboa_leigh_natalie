@@ -7,19 +7,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-import history from './history';
 
 function Navigation(props, match) {
-  console.log(props);
   const handleSelect = eventKey => alert(`selected ${eventKey}`);
   const [search, setSearch] = useState('');
   const handleChange = e => {
     setSearch(e.target.value);
     console.log(search);
-  };
-
-  const handleSubmit = () => {
-    history.push(`/search/${search}`);
   };
 
   return (

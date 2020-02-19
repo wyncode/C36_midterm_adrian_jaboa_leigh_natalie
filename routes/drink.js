@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 const axios = require('axios');
+const { handleDrinkIngredients } = require('./utilities');
 
 router.get('/api/drink', async (req, res, next) => {
   const drinkId = req.query.id;
@@ -9,8 +10,9 @@ router.get('/api/drink', async (req, res, next) => {
   axios
     .get(url)
     .then(function(response) {
-      const arr = response.data;
-      res.json(arr);
+      const drink = response.data;
+      const ingredients = handleDrinkIngredients(drink);
+      res.json({ ...drink, ingredients });
     })
     .catch(function(error) {
       res.json(error);

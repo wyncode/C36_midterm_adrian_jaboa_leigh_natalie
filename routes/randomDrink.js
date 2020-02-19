@@ -1,15 +1,18 @@
 const { Router } = require('express');
 const router = Router();
 const axios = require('axios');
+const { handleDrinkIngredients } = require('./utilities');
 
-router.get('/api/random', async (req, res, next) => {
+
+router.get('/api/random', async (_, res) => {
   const url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
 
   axios
     .get(url)
     .then(function(response) {
-      const arr = response.data.drinks[0];
-      res.json(arr);
+      const drink = response.data.drinks[0];
+      const ingredients = handleDrinkIngredients(drink);
+      res.json({ ...drink, ingredients });
     })
     .catch(function(error) {
       res.json(error);

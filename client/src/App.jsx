@@ -19,8 +19,6 @@ import Search from './components/Search';
 
 const App = () => (
   <>
-  <RandomButton/>
-  {/* <AboutUs/> */}
   <BrowserRouter>
     <Navigation />
     <Switch>
@@ -34,6 +32,7 @@ const App = () => (
 
     </Switch>
   </BrowserRouter>
+  {/* <Navigation/> */}
   </>
 );
 export default App;
