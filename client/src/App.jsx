@@ -25,9 +25,9 @@ const App = () => (
     <Navigation />
       <Route exact path="/" component={Home} />
       <Route exact path="/gin" component={GinCards} />
-      <Route path="/vodka" component={VodkaCard} />
+      <Route exact path="/vodka" component={VodkaCard} />
 
-      <Route exact path="/search/:searchTerm" component={Search} />
+      <Route path="/search/:searchTerm" component={Search} />
 
       <Route exact path="/About" component={AboutUs}/>
 
