@@ -7,18 +7,16 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
-
-
 function Navigation() {
   const history = useHistory();
   const [search, setSearch] = useState('');
-  
+
   const handleChange = e => setSearch(e.target.value);
 
   const handleSubmit = e => {
-    e.preventDefault()
+    // e.preventDefault()
     history.push(`/search/${search}`);
-  }
+  };
 
   return (
     <>
@@ -45,7 +43,6 @@ function Navigation() {
               className="mr-sm-2"
               value={search}
               onChange={handleChange}
-
             />
             <Button type="submit" variant="outline-info">
               Search

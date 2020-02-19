@@ -47,9 +47,7 @@ function GinCards() {
   }
 
   const getDrink = async () => {
-    const { data } = await axios.get(
-      'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin'
-    );
+    const { data } = await axios.get(' /api/search/gin');
     setDrinkData(data.drinks);
     console.log(data);
   };
@@ -64,22 +62,16 @@ function GinCards() {
         drinkData.map(drink => {
           return (
             <React.Fragment key={drink.idDrink}>
-              <CardGroup id="card" style={{ width: 200, margin: 15 }}>
-                <Card
-                  id="cardName"
-                  className="p-3"
-                  style={{ width: 300, margin: 0, padding: 20 }}
-                >
-                  <Card.Img variant="top" src={drink.strDrinkThumb} />
-                  <Card.Body>
-                    <Card.Title>
-                      <a onClick={handleOpen} href="#">
-                        {drink.strDrink}
-                      </a>
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-              </CardGroup>
+              <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={drink.strDrinkThumb} />
+                <Card.Body>
+                  <Card.Title>{drink.strDrink}</Card.Title>
+                  <Button onClick={handleOpen} variant="primary">
+                    Go somewhere
+                  </Button>
+                </Card.Body>
+              </Card>
+
               <MyVerticallyCenteredModal
                 show={handleOpen}
                 onHide={handleClose}
