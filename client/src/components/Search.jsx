@@ -3,7 +3,6 @@ import axios from 'axios';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import { Modal, Button, ButtonToolbar } from 'react-bootstrap';
-
 function Search({ match }) {
   const [drinks, setDrinks] = useState([]);
   const [open, setOpen] = useState(false);
@@ -12,11 +11,9 @@ function Search({ match }) {
     setActiveDrink(drink);
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };
-
   function MyVerticallyCenteredModal(props) {
     return (
       <Modal
@@ -44,25 +41,23 @@ function Search({ match }) {
       </Modal>
     );
   }
-
   useEffect(() => {
     axios
       .get(`/api/search?recipe=${match.params.searchTerm}`)
       .then(res => setDrinks(res.data.drinks || []));
   }, []);
-
   return (
     <div id="card-parent">
       {drinks &&
         drinks.map(drink => {
           return (
             <React.Fragment key={drink.idDrink}>
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={drink.strDrinkThumb} />
+              <Card className="recipes__box" style={{ width: '18rem' }}>
+                <Card.Img className="recipes__box-img" variant="top" src={drink.strDrinkThumb} />
                 <Card.Body>
                   <Card.Title>{drink.strDrink}</Card.Title>
-                  <Button onClick={handleOpen} variant="primary">
-                    Details
+                  <Button className="recipe__box-button" onClick={handleOpen} variant="primary">
+                    Get Recipe
                   </Button>
                 </Card.Body>
               </Card>
