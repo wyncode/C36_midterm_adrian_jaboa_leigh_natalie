@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-// import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-// import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
-import history from './history';
 
 
 
 function Navigation() {
+  const history = useHistory();
   const [search, setSearch] = useState('');
   
   const handleChange = e => setSearch(e.target.value);
@@ -47,7 +45,7 @@ function Navigation() {
               className="mr-sm-2"
               value={search}
               onChange={handleChange}
-              onSubmit={handleSubmit}
+
             />
             <Button type="submit" variant="outline-info">
               Search

@@ -1,7 +1,7 @@
 import React from 'react';
 import myVideo from '../photos/homepage_video.mp4'
 
-const Home = () => {
+const Home = props => {
   return (
     <video
         autoPlay

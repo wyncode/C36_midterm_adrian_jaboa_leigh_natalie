@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// const getRecipe =  () => {
-//   // const recipeName = e.target.elements.recipeName.value;
-//   // event.preventDefault();
-//  axios.get(`/api/search?recipe=${search}`)
-//  .then(data => setRecipe({ recipes: data.drinks}))
-// }
-// useEffect(getRecipe, [])
-
 
 
 function Search({match}) {
@@ -16,7 +8,7 @@ function Search({match}) {
 
   useEffect(() => {
     axios.get(`/api/search?recipe=${match.params.searchTerm}`)
-      .then(res => setDrinks(res.data.drinks))
+      .then(res => setDrinks(res.data.drinks || []))
   }, [])
   
   return (
