@@ -1,7 +1,6 @@
 import React from 'react';
 import myVideo from '../photos/homepage_video.mp4';
 
-
 const Home = props => {
   return (
     <>
@@ -19,7 +18,6 @@ const Home = props => {
       >
         <source src={myVideo} type="video/mp4" />
       </video>
-      
       </>
   )
 };
