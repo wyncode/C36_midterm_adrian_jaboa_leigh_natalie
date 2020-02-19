@@ -1,49 +1,59 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
-import { Modal, Button, ButtonToolbar } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
+
+function MyVerticallyCenteredModal({ activeDrink, onHide }) {
+  if (!activeDrink) return null;
+
+  const {
+    strDrink: drinkTitle,
+    strDrinkThumb: drinkPicture,
+    ingredients,
+    strInstructions: drinkInstructions
+  } = activeDrink;
+
+  return (
+    <Modal
+      show={activeDrink}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      onHide={onHide}
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          {drinkTitle}
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <img
+          style={{ height: '150px', width: '150px', textAlign: 'center' }}
+          src={drinkPicture}
+        ></img>
+        <h3>Instructions:</h3>
+        <p>{drinkInstructions}</p>
+        <h3>Ingredients:</h3>
+        {ingredients.map(({ ingredient, measure }) => (
+          <p>
+            {ingredient} {measure ? `-> ${measure}` : ''}
+          </p>
+        ))}
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 
 function Search({ match }) {
   const [drinks, setDrinks] = useState([]);
-  const [open, setOpen] = useState(false);
-  const [activeDrink, setActiveDrink] = useState({});
-  const handleOpen = drink => {
-    setActiveDrink(drink);
-    setOpen(true);
-  };
+  const [activeDrink, setActiveDrink] = useState(null);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleOpen = drink => setActiveDrink(drink);
 
-  function MyVerticallyCenteredModal(props) {
-    return (
-      <Modal
-        show={props.open}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            {props.activeDrink.strDrink}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.handleClose}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    );
-  }
+  const handleClose = () => setActiveDrink(null);
 
   useEffect(() => {
     axios
@@ -61,20 +71,19 @@ function Search({ match }) {
                 <Card.Img variant="top" src={drink.strDrinkThumb} />
                 <Card.Body>
                   <Card.Title>{drink.strDrink}</Card.Title>
-                  <Button onClick={handleOpen} variant="primary">
+                  <Button onClick={() => handleOpen(drink)} variant="primary">
                     Details
                   </Button>
                 </Card.Body>
               </Card>
-              <MyVerticallyCenteredModal
-                show={handleOpen}
-                onHide={handleClose}
-                open={open}
-                activeDrink={activeDrink}
-              />
             </React.Fragment>
           );
         })}
+      <MyVerticallyCenteredModal
+        show={handleOpen}
+        onHide={handleClose}
+        activeDrink={activeDrink}
+      />
     </div>
   );
 }
