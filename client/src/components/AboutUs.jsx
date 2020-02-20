@@ -8,9 +8,8 @@ const AboutUs = () => {
   return (
     <>
       <h1 className="hero-title">
-        "On the eve of Valentines, this band of devoted developers came together
-        to help bring more ways to help everyone drink responsibly. You're
-        welcome"{' '}
+        We are Mixed in Miami,<br/>
+        creating new ways to learn the art of cocktails{' '}
       </h1>
 
       <div
@@ -25,7 +24,8 @@ const AboutUs = () => {
             style={{ height: '17rem', width: '14rem' }}
           />
           <p className="hero-container_text">
-            Jaboa's favorite drink is Hennessey and Red Bull
+            Jaboa's favorite drink: <br/>
+            Hennessey and Red Bull
           </p>
         </div>
         <div className="hero-container_div">
@@ -36,7 +36,8 @@ const AboutUs = () => {
             style={{ height: '17rem', width: '14rem' }}
           />
           <p className="hero-container_text">
-            Natalie's favorite drink is Moscow Mule
+            Natalie's favorite drink: <br/>
+            Moscow Mule
           </p>
         </div>
         <div className="hero-container_div">
@@ -47,7 +48,8 @@ const AboutUs = () => {
             style={{ height: '17rem', width: '14rem' }}
           />
           <p className="hero-container_text">
-            Adrian's favorite drink is Pina Coloda
+            Adrian's favorite drink: <br/>
+            Pina Coloda
           </p>
         </div>
         <div className="hero-container_div">
@@ -58,7 +60,8 @@ const AboutUs = () => {
             style={{ height: '17rem', width: '14rem' }}
           />
           <p className="hero-container_text">
-            Leigh's favorite drink is Tanqueray and Sprite
+            Leigh's favorite drink: <br/>
+            Tanqueray and Sprite
           </p>
         </div>
       </div>

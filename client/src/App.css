@@ -5,7 +5,7 @@
 }
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .video {
@@ -185,12 +185,16 @@
 }
 
 .hero-container_text {
+  text-align: center;
+  font-weight: bold;
   display: flex;
   align-items: baseline;
 }
 
 .hero-title {
-  margin: 20px;
+  margin: 40px;
+  font-weight: bold;
+  font-kerning: 10px;
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
