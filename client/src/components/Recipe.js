@@ -3,20 +3,20 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 
-function VodkaCard() {
+function Recipe() {
   const [drinkData, setDrinkData] = useState([]);
 
-  const getDrink = async () => {
+  const getRecipe = async () => {
     const { data } = await axios.get(
-      'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=vodka'
+      'https://www.thecocktaildb.com/api/json/v2//filter.php?i=vodka'
     );
     setDrinkData(data.drinks);
-    console.log(data.dinks, 'wtf');
-  };
+};
 
   useEffect(() => {
     getDrink();
   }, []);
+
   return (
     <div id="card-parent">
       {drinkData.map(drink => {

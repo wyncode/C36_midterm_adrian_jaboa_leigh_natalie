@@ -20,7 +20,7 @@ const RandomButton = () => {
                   <img id="randomButtonImg" src={drink.strDrinkThumb} alt="random " />
                   <p id="randomDrinkTextId">{drink.strDrink}</p>
                     <h5 id="ingredients">Ingredients:</h5>
-                  {(drink.ingredients || []).map(({ ingredient, measure, }, i ) => <p key={i} id="ThankGoodness4Tommy"> -{ingredient} {measure ? `-> ${measure}` : ''}</p>)}
+                  {(drink.ingredients || []).map(({ ingredient, measure, }, i ) => <p key={i} id="tgft"> -{ingredient} {measure ? `-> ${measure}` : ''}</p>)}
                   <button className="exit_button" onClick={() => setDrink(null)}>Exit</button>
                 </div>
               </div>

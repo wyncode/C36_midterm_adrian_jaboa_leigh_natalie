@@ -10,16 +10,13 @@ import Search from './components/Search';
 
 const App = () => (
   <>
-
-  <BrowserRouter>
-    <Navigation />
+    <BrowserRouter>
+      <Navigation />
       <Route exact path="/" component={Home} />
-      <Route exact path="/About" component={AboutUs}/>
-      <Route exact path="/randombutton"component={RandomButton}/>
+      <Route exact path="/About" component={AboutUs} />
+      <Route exact path="/randombutton" component={RandomButton} />
       <Route path="/search/:searchTerm" component={Search} />
-
-
-  </BrowserRouter>
+    </BrowserRouter>
   </>
 );
 export default App;
