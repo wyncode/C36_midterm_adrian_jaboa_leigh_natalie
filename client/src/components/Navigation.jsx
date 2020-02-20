@@ -7,7 +7,6 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import img from '../photos/logo-1.png';
 
-
 function Navigation() {
   const history = useHistory();
   const [search, setSearch] = useState('');
@@ -15,14 +14,15 @@ function Navigation() {
   const handleChange = e => setSearch(e.target.value);
 
   const handleSubmit = e => {
-    // e.preventDefault()
     history.push(`/search/${search}`);
   };
 
   return (
     <>
       <Navbar bg="dark" variant="dark" style={{ zIndex: 5 }}>
-        <Navbar.Brand href="/"><img src={img} alt="logo" /></Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img id="navLogo" src={img} alt="logo" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
