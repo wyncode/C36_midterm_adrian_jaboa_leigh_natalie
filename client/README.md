@@ -70,7 +70,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 INTRODUCTION:
 
 1- Who are we?
-  First of all, thank you for taking the time to read this. This is Mixed in Miami, developed by a small group of student developers from Wyncode Academy. We seek to help enthusiast drinkers who are interested in learning the art of cocktails by providing the resources of great drink recipes.
+  First of all, thank you for taking the time to read this. This is Mixed in Miami, developed by a small group of student developers from Wyncode Academy. We seek to help drink enthusiasts who are interested in learning the art of cocktails by providing the resources of great drink recipes.
 
 2- Members of Mixed in Miami
     - Adrian Garcia
@@ -80,7 +80,7 @@ INTRODUCTION:
 
 OUR APP:
 
-As previously mentioned, our main objective is to help enthusiast drinkers by providing a resourceful database of drink recipes. We have achieved this through our app Mixed in Miami, with the latest up to date list of cocktails provided by TheCocktailDB.com API.
+As previously mentioned, our main objective is to help drink enthusiasts by providing a resourceful database of drink recipes. We have achieved this through our app Mixed in Miami, with the latest and up to date list of cocktails provided by TheCocktailDB.com API.
 
 The main page contains a navigation bar: Home, About, Discover, and Search bar
 
@@ -92,11 +92,4 @@ The discover page directs you to the "Mix It Up!" button. This button will then 
 
  Lastly, the search bar allows the user to look up any drink by name, main ingredient and even auto populate suggestions. This is achieved by pulling from the API listed under routes folder, drinks.js. The results show similarly to the discover but with multiple results. 
  
-The styling throughout the application is  all done through react bootstrap.
-
- 
-
-
-
-
-
+The styling throughout the application is all done through react bootstrap.
