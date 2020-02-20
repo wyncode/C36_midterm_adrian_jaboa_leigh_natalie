@@ -23,7 +23,7 @@ function MyVerticallyCenteredModal({ activeDrink, onHide }) {
       onHide={onHide}
     >
       <Modal.Header id="modalHead" closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title className="cardTitle" id="contained-modal-title-vcenter">
           {drinkTitle}
         </Modal.Title>
       </Modal.Header>
@@ -43,7 +43,9 @@ function MyVerticallyCenteredModal({ activeDrink, onHide }) {
         ))}
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={onHide}>Close</Button>
+        <Button id="cardButton" onClick={onHide}>
+          Close
+        </Button>
       </Modal.Footer>
     </Modal>
   );
@@ -75,8 +77,14 @@ function Search({ match }) {
                   src={drink.strDrinkThumb}
                 />
                 <Card.Body>
-                  <Card.Title>{drink.strDrink}</Card.Title>
-                  <Button onClick={() => handleOpen(drink)} variant="primary">
+                  <Card.Title className="cardTitle">
+                    {drink.strDrink}
+                  </Card.Title>
+                  <Button
+                    id="cardButton"
+                    onClick={() => handleOpen(drink)}
+                    variant="primary"
+                  >
                     Details
                   </Button>
                 </Card.Body>
