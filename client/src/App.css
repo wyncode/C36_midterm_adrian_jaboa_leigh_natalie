@@ -4,49 +4,6 @@
   flex-wrap: wrap;
 }
 
-#cardName {
-  background: red;
-  background: -webkit-linear-gradient(
-    left,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-  background: -o-linear-gradient(
-    right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-  background: -moz-linear-gradient(
-    right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-  background: linear-gradient(
-    to right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-}
-
-/* background:-webkit-background-clip: text; */
-/* -webkit-text-fill-color: transparent; */
-/* font-size: 20vw; */
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -67,13 +24,13 @@
   size: 100px;
 }
 
-.random-drink-container{
+.random-drink-container {
   width: 250px;
   height: 50px;
   justify-content: center;
 }
 
-#randomButtonImg{
+#randomButtonImg {
   height: 250px;
   width: 265px;
   border-radius: 10%;
@@ -87,8 +44,7 @@
   align-items: baseline;
   font-size: medium;
   border: solid 3px gray;
-  box-shadow:inset 0px -20px 14px -7px #276873;
-
+  box-shadow: inset 0px -20px 14px -7px #276873;
 }
 .close-button {
   color: red;
@@ -102,61 +58,59 @@
   font-size: 25px;
   padding: 0%;
   margin: 10px;
-
 }
 
 .exit_button {
-  background-color: #2ABFCD;
+  background-color: #2abfcd;
   margin: 5px;
   color: white;
 }
 
 #ingredients {
-  color: #2ABFCD;
+  color: #2abfcd;
   margin-left: 10px;
   margin-bottom: 10px;
 }
 
 #randomButtonDrink {
-  box-shadow:inset 0px -20px 14px -7px #276873;
-	background:linear-gradient(to bottom, #2ABFCD 5%, #2ABFCD 100%);
-	background-color:#2ABFCD;
-	border-radius:19px;
-	border:2px solid #29668f;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Georgia;
-	font-size:20px;
-	font-weight:bold;
-	padding:13px 32px;
-	text-decoration:none;
-  text-shadow:0px -2px 0px #3d768a;
+  box-shadow: inset 0px -20px 14px -7px #276873;
+  background: linear-gradient(to bottom, #2abfcd 5%, #2abfcd 100%);
+  background-color: #2abfcd;
+  border-radius: 19px;
+  border: 2px solid #29668f;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  text-shadow: 0px -2px 0px #3d768a;
   margin-top: 20px;
   margin-left: 40vw;
   margin-bottom: 20px;
 }
 #randomButtonDrink:hover {
-  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-	background-color:#408c99;
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
 }
 #randomButtonDrink:active {
-  position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 #randombuttonImgParent {
   position: absolute;
   margin-left: 40%;
   background: #fff;
-  box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 34px -13px rgba(0, 0, 0, 0.75);
   text-align: center;
   overflow: hidden;
   border-radius: 10px;
 }
 
 #tgft {
-
   font-size: medium;
   text-shadow: hotpink;
   padding: 0%;
@@ -166,87 +120,89 @@
 .recipes__box-img {
   height: 250px;
   width: 265px;
-   border-radius: 10%;
-   margin: 10px;
- }
- .recipes__box {
-   background: #fff;
-   margin: 10px;
-   padding-bottom: 2rem;
-   border-radius: 5px;
-   box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
-   text-align: center;
-   overflow: hidden;
- }
+  border-radius: 10%;
+  margin: 10px;
+}
+.recipes__box {
+  background: #fff;
+  margin: 10px;
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: -1px 2px 34px -13px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  overflow: hidden;
+}
 
- .nav-link {
-	background:linear-gradient(to bottom, #393f44 5%, #393f44 100%);
-	background-color:#393f44;
-	border-radius:8px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	font-weight:bold;
-	padding:8px 35px;
-  text-decoration:none;
+.nav-link {
+  background: linear-gradient(to bottom, #393f44 5%, #393f44 100%);
+  background-color: #393f44;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 35px;
+  text-decoration: none;
   margin-right: 20px;
- }
- .nav-link:hover {
-  background:linear-gradient(to bottom, #408c99 5%, #2abfcd 100%);
-	background-color:#408c99;
- }
- .nav-link:active {
-  position:relative;
-	top:1px;
- }
+}
+.nav-link:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #2abfcd 100%);
+  background-color: #408c99;
+}
+.nav-link:active {
+  position: relative;
+  top: 1px;
+}
 
- .hero-container {
-   display: flex;
-   justify-content: space-evenly;
- }
+.hero-container {
+  display: flex;
+  justify-content: space-evenly;
+}
 
- .hero-container_div {
-   display: flex;
-   flex-flow: column wrap;
-   justify-content: center;
-   align-items: center;
-   box-shadow: 2px 2px #2abfcd;
-   border: solid 1px black;
-   padding: 20px;
-   margin: 20px;
- }
+.hero-container_div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px #2abfcd;
+  border: solid 1px black;
+  padding: 20px;
+  margin: 20px;
+}
 
- .hero-container_img {
-   border: solid 2px #2abfcd;
-   margin-bottom: 20px;
-   transition: all .2s ease-in-out;
-   border-radius: 25px;
- }
+.hero-container_img {
+  border: solid 2px #2abfcd;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 25px;
+}
 
- .hero-container_img:hover {
-   transform: scale(1.10);
-   border-radius: 75px;
- }
+.hero-container_img:hover {
+  transform: scale(1.1);
+  border-radius: 75px;
+}
 
- .hero-container_text {
-   display: flex;
-   align-items: baseline;
- }
+.hero-container_text {
+  display: flex;
+  align-items: baseline;
+}
 
- .hero-title {
-   margin: 20px;
-   text-align: center;
-   transition: all .2s ease-in-out;
- }
+.hero-title {
+  margin: 20px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
 
- .hero-title:hover {
+.hero-title:hover {
   transform: scale(1.05);
 }
 
+#navLogo {
+  height: 50px;
+}
 
-
-
-
-
+#drinkModal {
+  text-align: center;
+}

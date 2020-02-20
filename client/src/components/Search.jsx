@@ -15,13 +15,14 @@ function MyVerticallyCenteredModal({ activeDrink, onHide }) {
 
   return (
     <Modal
+      id="drinkModal"
       show={activeDrink}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
       onHide={onHide}
     >
-      <Modal.Header closeButton>
+      <Modal.Header id="modalHead" closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           {drinkTitle}
         </Modal.Title>
@@ -30,6 +31,7 @@ function MyVerticallyCenteredModal({ activeDrink, onHide }) {
         <img
           style={{ height: '150px', width: '150px', textAlign: 'center' }}
           src={drinkPicture}
+          alt={drinkTitle}
         ></img>
         <h3>Instructions:</h3>
         <p>{drinkInstructions}</p>
